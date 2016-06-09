@@ -1,7 +1,8 @@
 # tripingpc.github.io
 
 This is a pretty lit website
-You should check it out
+
+You should check it out.
 
 # Credits
 (TripingPC) [https://github.com/TripingPC] for making the website
