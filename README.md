@@ -11,4 +11,4 @@ You should check it out.
 
 [eye-sigil] (https://github.com/eye-sigil) for creating the super rad server icon.  (2 bad 4 Azerty...)
 
-Thanks to Twitter for making Bootstrap 3 (Screw BS4)
+Thanks to Twitter for making Bootstrap 3 (BS4 is pretty lit too)
