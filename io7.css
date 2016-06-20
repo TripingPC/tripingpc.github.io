@@ -10,7 +10,7 @@
 *{
     font-family: mobile-sans;
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: none!important;
 }
 
 h1{
