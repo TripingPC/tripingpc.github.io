@@ -70,11 +70,10 @@ p{
     background: rgba(109,48,158,0.7);
     padding: 10px;
     box-sizing: padding-box;
-    border-radius: 4px;
     text-align: left!important;
     width: 30vw;
     height: 28vh;
-    border: 1.5px #ffffff dashed;
+    border: 1.5px #ffffff solid;
     overflow-y: scroll;
 }
 
