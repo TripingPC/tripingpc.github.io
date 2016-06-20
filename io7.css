@@ -29,6 +29,13 @@ a{
     margin: 8px;
     display: inline-block;
     width: 120px;
+    transition: background 0.2s ease;
+}
+
+.small-button:hover{
+    transition: background 0.2s ease;
+    background: #ffffff!important;
+    color: rgb(64, 91, 180)!important;
 }
 
 .big-button{
@@ -37,6 +44,13 @@ a{
     color: rgb(64, 91, 180)!important;
     padding-left: 56px!important;
     padding-right: 56px!important;
+    transition: background 0.2s ease;
+}
+
+.big-button:hover{
+    transition: background 0.2s ease;
+    background: rgba(0,0,0,0.0)!important;
+    color: #ffffff!important;
 }
 
 p{
