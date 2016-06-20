@@ -75,6 +75,7 @@ p{
     width: 30vw;
     height: 28vh;
     border: 1.5px #ffffff dashed;
+    overflow-y: scroll;
 }
 
 .changelog h1, .changelog h2, .changelog p{
