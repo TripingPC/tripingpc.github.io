@@ -51,6 +51,7 @@ a{
     transition: background 0.2s ease;
     background: rgba(0,0,0,0.0)!important;
     color: #ffffff!important;
+    border: 1.5px white solid;
 }
 
 p{
