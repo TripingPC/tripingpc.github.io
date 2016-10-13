@@ -8,16 +8,9 @@
     <meta property="og:site_name" content="tripin.gq" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>a:hover{background:white!important; color:#388E3C!important; text-decoration:none;</style>
-    <script>
-      var bgm = document.getElementById("bg-audio"); 
-      function pauseMusic() { 
-         bgm.pause(); 
-      }
-    </script>
   </head>
   <body style="background:url(http://ayana.io/res/img/stock1.jpg); background-size:cover;">
-    <button onclick="pauseMusic()">stop music</button>
-    <audio id="bg-audio" style="display:none;" src="background.ogg" controls autoplay loop></audio>
+    <audio style="position:fixed; left:4vw; top:4vh;" src="background.ogg" controls autoplay loop></audio>
     <div style="
     background:rgba(255,255,255,0.3);
     border:1px solid white;
