@@ -67,7 +67,7 @@ p{
     position: absolute;
     left: 20px;
     bottom: 20px;
-    background: rgba(109,48,158,0.7);
+    background: rgba(0,20,30,0.7);
     padding: 10px;
     box-sizing: padding-box;
     text-align: left!important;
@@ -75,6 +75,7 @@ p{
     height: 28vh;
     border: 1.5px #ffffff solid;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .changelog h1, .changelog h2, .changelog p{
