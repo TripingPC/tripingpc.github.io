@@ -1,3 +1,8 @@
+body{
+  color:white;
+  background:#36393e;
+}
+
 h1, h2, .paragraph{
   margin-left:12px;
   margin-right:12px;
@@ -9,9 +14,4 @@ img{
   margin-left:auto;
   margin-right:auto;
   text-align:center!important;
-}
-
-body{
-  color:white;
-  background:#36393e;
 }
