@@ -3,6 +3,10 @@ body{
   background:#36393e;
 }
 
+.main{
+  height:200px;
+}
+
 h1, h2, .paragraph{
   margin-left:12px;
   margin-right:12px;
