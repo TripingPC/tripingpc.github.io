@@ -24,3 +24,9 @@ code{
   margin-top:3px;
   margin-bottom:3px;
 }
+
+div p{
+  margin:12px;
+  text-align:center;
+  font-size:larger;
+}
