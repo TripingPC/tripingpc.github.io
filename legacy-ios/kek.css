@@ -1,3 +1,5 @@
-h1, h2, img{
-  text-align:center;
+h1, h2, .paragraph{
+  margin-left:12px;
+  margin-right:12px;
+  text-align:left;
 }
