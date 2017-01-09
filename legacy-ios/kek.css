@@ -3,3 +3,8 @@ h1, h2, .paragraph{
   margin-right:12px;
   text-align:left;
 }
+
+img{
+  margin-left:auto;
+  margin-right:auto;
+}
