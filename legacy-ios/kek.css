@@ -37,6 +37,8 @@ div p{
 }
 
 .footer{
+  bottom:0px!important;
+  position:fixed;
   width:100%;
   height:48px;
   background:#000000;
