@@ -15,6 +15,7 @@ body{
     padding: 0px;
     background: #244287;
     text-align: center;
+    padding-left:50%;
 }
 
 ::-webkit-scrollbar { 
@@ -80,6 +81,7 @@ li a, li p{
     overflow-y: hidden;
     position: fixed;
     z-index: 99;
+    left:0;
 }
 li p{
     background: #23b29f;
