@@ -8,6 +8,8 @@
     left:0;
     z-index:-20;
     opacity:.2;
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 
 body{
@@ -41,6 +43,7 @@ iframe{
     width: 700px;
     text-align: left;
     line-height: 18px;
+    right:24px;
 }
 
 @font-face {
