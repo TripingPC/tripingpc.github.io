@@ -2,7 +2,7 @@
 
 .bg-overlay{
     position:fixed;
-    height:100vh;
+    height:auto;
     width:100vw;
     top:0;
     left:0;
