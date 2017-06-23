@@ -81,7 +81,6 @@ li p{
     font-stretch: expanded;
     font-size: 160%;
     max-height: 60px;
-    border-bottom: 1.5px white solid!important;
     min-width: 200px!important;
 }
 li a{
