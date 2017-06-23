@@ -82,6 +82,7 @@ li p{
     font-size: 160%;
     max-height: 60px;
     min-width: 200px!important;
+    border-bottom: 1px #23b29f solid;
 }
 li a{
     transition: background 0.2s ease;
