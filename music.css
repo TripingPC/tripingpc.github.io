@@ -3,7 +3,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: #333a43;
+    background: #244287;
     text-align: center;
 }
 
@@ -17,24 +17,16 @@ iframe{
     width: 700px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
-    border: 1.5px white solid!important;
-    -webkit-filter: brightness(70%);
-    transition: -webkit-filter 0.2s ease;
-    background: #5B6878;
+    border: 4px white solid!important;
+    background: rgba(255,255,255,0.3);
     background-image:url(bandcamp.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 
-iframe:hover, iframe:active{
-  -webkit-filter: brightness(100%);
-  transition: -webkit-filter 0.2s ease;
-  }
-
 .album-description{
     color: #ffffff;
-    font-size: 14px;
+    font-size: 16px;
     width: 700px;
     margin-left: auto;
     margin-right: auto;
