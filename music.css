@@ -1,5 +1,15 @@
 *{font-family: sans-serif;}
 
+.bg-overlay{
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    top:0;
+    left:0;
+    z-index:-20;
+    opacity:.2;
+}
+
 body{
     margin: 0px;
     padding: 0px;
