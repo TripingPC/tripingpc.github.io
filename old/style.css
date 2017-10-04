@@ -89,3 +89,7 @@ h2{
 .social-icon-link{
     color: transparent;
 }
+
+h1, p{color:white;}
+
+a{text-decoration:none; color:#5697ff;}
