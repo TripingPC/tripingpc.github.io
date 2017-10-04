@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
-*{font-family: Comfortaa, Century Gothic, sans-serif;}
+*{font-family: Comfortaa, Century Gothic, sans-serif!important;}
 
 body{
     margin: 0px;
@@ -61,7 +61,7 @@ body{
 }
 
 p, h1, h2{
-    font-family: Comfortaa, Century Gothic, sans-serif;
+    font-family: Comfortaa, Century Gothic, sans-serif!important;
 }
 
 h2{
