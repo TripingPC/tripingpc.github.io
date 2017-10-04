@@ -1,14 +1,11 @@
-@font-face {
-    font-family: aleo
-    src: url(aleo-regular.woff);
-}
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
-*{font-family: aleo, Rockwell, Arial, sans-serif;}
+*{font-family: Comfortaa, Century Gothic, sans-serif;}
 
 body{
     margin: 0px;
     padding: 0px;
-    background: rgb(157, 183, 185);
+    background: #21262d;
 }
 
 
@@ -21,7 +18,7 @@ body{
     text-align: center;
     width: 100%;
     height: 100%;
-    box-shadow: 0px 8px 48px 12px rgba(0,0,0,0.5);
+    box-shadow: 0px 8px 48px 8px rgba(0,0,0,0.3);
 }
 
 .cover, .content-div, .social-links{
@@ -34,7 +31,6 @@ body{
     font-size: 78pt;
     padding-top: 350px;
     text-shadow: 0px 3px 2px rgba(71, 71, 71, 1);
-    background: rgba(0,0,0,0.3);
     padding-bottom: 16px;
 }
 
@@ -55,21 +51,21 @@ body{
 }
 
 .social-links, .content-div{
-    background: rgb(255,255,255);
+    background: #1d4687;
     width: 80%;
     border-radius: 4px;
-    border: 1px rgb(127,127,127) solid;
+    border: 1px rgba(255,255,255,0.4) solid;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 4px 6px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.3);
 }
 
 p, h1, h2{
-    font-family: aleo, Rockwell, Arial, sans-serif;
+    font-family: Comfortaa, Century Gothic, sans-serif;
 }
 
 h2{
-    color: rgb(100,100,100);
+    color: rgb(255,255,255);
 }
 
 .social-icon{
@@ -79,6 +75,7 @@ h2{
     margin-right: 8px;
     -webkit-filter: contrast(10%);
     transition: all 0.2s ease;
+    filter:invert(1);
 }
 
 .social-icon:hover{
@@ -86,6 +83,7 @@ h2{
     transition: all 0.2s ease;
     margin-left: 16px;
     margin-right: 16px;
+    filter:invert(1);
 }
 
 .social-icon-link{
