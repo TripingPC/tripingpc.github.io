@@ -1,0 +1,19 @@
+.btn{
+    border:0!important;
+    margin: 0.1em;
+}
+
+.btn-primary{
+    background: #B10061!important;
+}
+
+.btn-secondary{
+    background: #EEEEEE!important;
+    color: #E2007C!important;
+}
+
+body{
+    background: #353535!important;
+}
+
+::-webkit-scrollbar{display:none;}
