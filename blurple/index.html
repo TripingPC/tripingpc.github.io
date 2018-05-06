@@ -78,11 +78,32 @@
                 </div>
             </div>
             
-            <div class="col-sm-4" style="background:#red;">
+            <div class="col-sm-4">
                 <h2>Final Result: <h4>(Screenshot it yourself or make a commit so it gets dropped into a canvas)</h4></h2>
                 <div id="final" style="display:block; max-width: 512px; height:512px" class="image">
                 </div>
                 <div id="final-color" style="background: hsl(227, 58%, 64%); display:block; width:512px; height: 512px; position:absolute; margin-top: -512px; z-index:-1; box-shadow: 0px 0px 0px 4px rgba(114,137,218,1);"></div>
+            </div>
+
+            <div class="col-sm-4">
+                <h2>Configuration:</h2>
+                
+                <div class="form-group">
+                    <label for="formControlRange">Saturation</label>
+                    <input type="range" class="form-control-range" value="0" min="0" max="1" step="0.01" id="slider-saturation" onchange="updateFilter()">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Brightness</label>
+                    <input type="range" class="form-control-range" value="0.7" min="0" max="1" step="0.01" id="slider-brightness" onchange="updateFilter()">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Contrast</label>
+                    <input type="range" class="form-control-range" value="3" min="0" max="5" step="0.05" id="slider-contrast" onchange="updateFilter()">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Invert</label>
+                    <input type="range" class="form-control-range" value="0" min="0" max="1" step="0.01" id="slider-invert" onchange="updateFilter()">
+                </div>
             </div>
             
         </div>
@@ -94,6 +115,18 @@
             $('#original').css('background-image', 'url(' + getImagePath + ')');
             $('#final').css('background-image', 'url(' + getImagePath + ')');
         }
+
+        function updateFilter() {
+            var saturation = document.getElementById('slider-saturation').value;
+            var brightness = document.getElementById('slider-brightness').value;
+            var contrast = document.getElementById('slider-contrast').value;
+            var invert = document.getElementById('slider-invert').value;
+
+            var final = document.getElementById('final');
+            final.style.filter = `saturate(${saturation}) brightness(${brightness}) contrast(${contrast}) invert(${invert})`;
+        }
+
+        updateFilter();
     </script>
 </body>
 </html>
