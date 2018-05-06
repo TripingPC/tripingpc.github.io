@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blurpleinator-5000</title>
+    <meta name="og:title" content="Blurpleinator-5000">
+    <meta name="og:description" content="Make your avatar blurple!">
+    <meta name="og:type" content="website">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+            *{font-family:Comfortaa;}
+            
+            #original{
+                background-image: url('https://owo.whats-th.is/9a89da.png');
+                background-size: cover;
+                background-position: center;
+                overflow:hidden;
+                transition: background-image 0.4s ease;
+                border: 4px solid #7289da;
+                margin-top: 44px;
+            }
+            
+            #final{
+                background-image: url('');
+                background-size: cover;
+                background-position: center;
+                overflow:hidden;
+                transition: background-image 0.2s ease;
+                border: 4px solid #ffffff;
+                margin-top:5%;
+                filter: saturate(0) brightness(0.7) contrast(3) invert(0);
+                background-color: rgb(181, 0, 238);
+                mix-blend-mode: color-dodge;
+            }
+            
+            #canvas{
+                width:100%;
+                height:100%;
+                background-image: url('');
+            }
+            
+            #input{
+                display:block;
+                width:100%;
+                background:rgba(255, 255, 255, 0.01);
+                height: 110%;
+                margin-top: -10%;
+                cursor: pointer;
+            }
+            
+            div.jumbotron:first-of-type{
+                border-bottom: 4px solid #7289da;
+                background: #d0dbf0!important
+            }</style>
+</head>
+<body>
+    
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Blurpleinator-5000</h1>
+            <p>Drag your image in here to get it converted.</p>
+            <h6>Made by TripingPC using CSS3 filters.</h6>
+        </div>
+    </div>
+    
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left:3%">
+            
+            <div class="col-sm-4">
+                <h2>Original Image:</h2><br>
+                <div id="original" style="display:block; max-width: 512px; height:512px" class="image">
+                    <input id="input" name="input-image" type="file" onchange="readURL(event)">
+                </div>
+            </div>
+            
+            <div class="col-sm-4" style="background:#red;">
+                <h2>Final Result: <h4>(Screenshot it yourself or make a commit so it gets dropped into a canvas)</h4></h2>
+                <div id="final" style="display:block; max-width: 512px; height:512px" class="image">
+                </div>
+                <div id="final-color" style="background: hsl(227, 58%, 64%); display:block; width:512px; height: 512px; position:absolute; margin-top: -512px; z-index:-1; box-shadow: 0px 0px 0px 4px rgba(114,137,218,1);"></div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        function readURL(event){
+            var getImagePath = URL.createObjectURL(event.target.files[0]);
+            $('#original').css('background-image', 'url(' + getImagePath + ')');
+            $('#final').css('background-image', 'url(' + getImagePath + ')');
+        }
+    </script>
+</body>
+</html>
