@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Skypeinator-6000</title>
     <meta name="og:title" content="Skypeinator-6000">
-    <meta name="og:description" content="Make your avatar Skype!">
+    <meta name="og:description" content="No seriously, fuck Discord!">
     <meta name="og:type" content="website">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -94,7 +94,7 @@
     <div class="jumbotron" style="height:150px; padding-top: 0px;">
         <div class="container">
             <h1>Skypeinator-6000</h1>
-            <p>If this one doesn't work, you can always use the <a href="https://triping.stream/blurple">old version</a></p>
+            <p>Let's just all go back to IRC.</p>
         </div>
     </div>
     
@@ -117,7 +117,7 @@
                 <h2>Final Result:</h2>
                 <div id="processing" style="translate: 0px -1474px; clip: rect(1024px, 512px, 1536px, 0px);">
                     <div id="final" style="display:block; width: 512px; height:512px" class="image"></div>
-                    <div id="final-color" style=" background-image: url(''); background-blend-mode:color-dodge; background: #12A5F4; display:block; width:512px; height: 512px;"></div>                
+                    <div id="final-color" style=" background-image: url(''); background-blend-mode:color-dodge; background: #1094db; display:block; width:512px; height: 512px;"></div>                
                     <img id="image" style="margin-top:500px; width:512px; height: 512px; display:block; border:4px solid #363636; box-sizing:content-box;">
                 </div>
             </div>
@@ -158,7 +158,7 @@
             domtoimage.toPng(document.getElementById('final'))
             .then(function (dataUrl) {
                 var bwImage = dataUrl;
-                $('#final-color').css('background', '#12a5f4 url(' + bwImage + ') 0px 0px/512px 512px no-repeat');
+                $('#final-color').css('background', '#1094db url(' + bwImage + ') 0px 0px/512px 512px no-repeat');
             })
         }
 
