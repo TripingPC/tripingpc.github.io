@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Skypeinator-6000</title>
+    <meta name="og:title" content="Skypeinator-6000">
+    <meta name="og:description" content="Make your avatar Skype!">
+    <meta name="og:type" content="website">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/dom-to-image@2.6.0/src/dom-to-image.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+        *{font-family:Comfortaa;}
+        
+        #original{
+            background-image: url('https://owo.whats-th.is/716237.png');
+            background-size: cover;
+            background-position: center;
+            overflow:hidden;
+            border: 4px solid #363636;
+            box-sizing:content-box;
+        }
+        
+        #final{
+            background-image: url('');
+            background-size: cover;
+            background-position: center;
+            overflow:hidden;
+            filter: saturate(0) brightness(0.7) contrast(3) invert(0);
+            background-color: #fff;
+            mix-blend-mode: color-dodge;
+        }
+        
+        #canvas{
+            width:100%;
+            height:100%;
+            background-image: url('');
+        }
+        
+        #input{
+            display:block;
+            width:100%;
+            height: 100%;
+            opacity:0;
+            cursor: pointer;
+        }
+        
+        div.jumbotron:first-of-type{
+            border-bottom: 4px solid #a0a0a0;
+            background: #e0e0e0!important
+        }
+        .form-control-range {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 20px;
+            border-radius:20px;
+            background: #e0e0e0;
+            outline: none;
+        }
+
+        .form-control-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius:20px;
+            border: 4px solid #e0e0e0;
+            background: #12a5f4;
+            cursor: pointer;
+        }
+
+        .form-control-range::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius:20px;
+            border: 4px solid #e0e0e0;
+            background: #12a5f4;
+            cursor: pointer;
+        }
+
+        #image:after{
+            visibility:visible;
+            display:inline;
+            content: "<-- this one you can save.";
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="jumbotron" style="height:150px; padding-top: 0px;">
+        <div class="container">
+            <h1>Skypeinator-6000</h1>
+            <p>If this one doesn't work, you can always use the <a href="https://triping.stream/blurple">old version</a></p>
+        </div>
+    </div>
+    
+
+    <div class="container-fluid">
+        <div class="row" >
+            
+            <div class="col-sm-4">
+                <h2>Original Image:</h2>
+                <div class="form-group">
+                        <input type="text" class="form-control" id="input-url" placeholder="Use an image from a URL" oninput="updateURL()" onpaste="updateURL()" spellcheck="false"
+                        style="border-radius:0; border:none; background:#363636; color:#12a5f4; font-weight:bold; max-width: 520px;">
+                      </div>
+                <div id="original" style="display:block; width: 512px; height:512px" class="image">
+                    <input id="input" name="input-image" type="file" onchange="readURL(event)">
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <h2>Final Result:</h2>
+                <div id="processing" style="translate: 0px -1474px; clip: rect(1024px, 512px, 1536px, 0px);">
+                    <div id="final" style="display:block; width: 512px; height:512px" class="image"></div>
+                    <div id="final-color" style=" background-image: url(''); background-blend-mode:color-dodge; background: hsl(227, 58%, 63.7%); display:block; width:512px; height: 512px;"></div>                
+                    <img id="image" style="margin-top:500px; width:512px; height: 512px; display:block; border:4px solid #363636; box-sizing:content-box;">
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <h2>Configuration:</h2>
+                
+                <div class="form-group">
+                    <label for="formControlRange">Saturation</label>
+                    <input type="range" class="form-control-range" value="0" min="0" max="1" step="0.01" id="slider-saturation" oninput="updateFilter()">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Brightness</label>
+                    <input type="range" class="form-control-range" value="0.7" min="0" max="1.5" step="0.01" id="slider-brightness" oninput="updateFilter()">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Contrast</label>
+                    <input type="range" class="form-control-range" value="3" min="0" max="5" step="0.05" id="slider-contrast" oninput="updateFilter()">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Invert</label>
+                    <input type="range" class="form-control-range" value="0" min="0" max="1" step="0.01" id="slider-invert" oninput="updateFilter()">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div style="width:100%; padding: 30px; text-align:center; background:#363636; margin-top:20px; color: rgba(255,255,255,0.6);">
+        <p>Site by TripingPC (<a href="https://github.com/TripingPC/tripingpc.github.io/tree/master/blurple">View on Github</a>)</p>
+        <p>Sliders by <a href="https://github.com/Ratismal">stupid cat</a>.</p>
+        <p>Licensed under WTFPL (Learn more at <a href="http://www.wtfpl.net/">wtfpl.net</a>)</p>
+    </div>
+
+    <div id="processing-bw-to-blurple"></div>
+    
+    <script>
+        function generateImage(){
+            domtoimage.toPng(document.getElementById('final'))
+            .then(function (dataUrl) {
+                var bwImage = dataUrl;
+                $('#final-color').css('background', '#7289da url(' + bwImage + ') 0px 0px/512px 512px no-repeat');
+            })
+        }
+
+        function setImage(){
+            domtoimage.toPng(document.getElementById('final-color'))
+                .then(function (dataUrl) {
+                var colorImage = dataUrl;
+                $('#image').attr('src',dataUrl);
+            })
+        }
+
+        setTimeout(generateImage, 100);
+        setTimeout(setImage, 300);
+
+        function readURL(event){
+            var getImagePath = URL.createObjectURL(event.target.files[0]);
+            $('#original').css('background-image', 'url(' + getImagePath + ')');
+            $('#final').css('background-image', 'url(' + getImagePath + ')');
+            setTimeout(generateImage, 100);
+            setTimeout(setImage, 300);
+            setTimeout(updateFilter, 300);
+        }
+
+        function updateURL(event){
+            var getImagePath = document.getElementById('input-url').value;
+            console.log(getImagePath);
+            $('#original').css('background-image', 'url(' + getImagePath + ')');
+            $('#final').css('background-image', 'url(' + getImagePath + ')');
+            setTimeout(generateImage, 100);
+            setTimeout(setImage, 300);
+            setTimeout(updateFilter, 300);
+        }
+
+        function updateFilter() {
+            var saturation = document.getElementById('slider-saturation').value;
+            var brightness = document.getElementById('slider-brightness').value;
+            var contrast = document.getElementById('slider-contrast').value;
+            var invert = document.getElementById('slider-invert').value;
+
+            var final = document.getElementById('final');
+            final.style.filter = `saturate(${saturation}) brightness(${brightness}) contrast(${contrast}) invert(${invert})`;
+
+            setTimeout(generateImage, 100);
+            setTimeout(setImage, 300);
+        }
+    </script>
+</body>
+</html>
