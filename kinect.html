@@ -4,27 +4,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to setup K2VR Correctly</title>
+  <title>How to setup KinectToVR</title>
   <meta property="og:title" content="How to setup K2VR Correctly" />
   <meta property="og:description" content="A write-up on everything to do and not to do when setting up a Kinect sensor for full-body tracking using KinectToVR." />
   <meta property="og:image" content="https://raw.githubusercontent.com/TripingPC/tripingpc.github.io/master/K2VR_Logo.svg.png">
   <meta name="theme-color" content="#668000">
   <style>
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Inter');
 body{
     background-color:#1A1A1A;
     color:#d8d8d1;
-    font-family:Ubuntu;
+    font-family:Inter;
     margin:0;
     font-size: x-large;
     text-rendering: geometricPrecision;
 }
-p{line-height: 1.4em;}
+p{line-height: 1.6em; margin-top:40px;}
 h1, h2{color:#8caf02;}
 strong{font-weight: 900; color:#fff;}
 
 .header{
-    background-image:url("https://raytracing-benchmarks.are-really.cool/9pXz2eR.png");
+    background-image:url("https://owo.whats-th.is/9pXz2eR.png");
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,28 +51,56 @@ a{
 code{
     background-color:#000;
 }
+
+.installer-ad{
+  background-color:transparent;
+  background-image: url("https://owo.whats-th.is/8QRwR6z.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display:block;
+  width:auto;
+  height:400px;
+  margin:0;
+  padding:0;
+}
+
+.remark{
+  margin-top:-24px;
+  font-size: 18px;
+  color:white;
+  background:rgb(187, 25, 25);
+  border-radius:5px;
+  border:2px solid rgb(116, 2, 2);
+  width:max-content!important;
+  padding:0px 4px;
+}
   </style>
 </head>
 
 <body class="stackedit">
   <div class="header"></div>
-  <div class="stackedit__html"><h1 id="how-to-setup-k2vr-but-correctly">How to setup K2VR but correctly</h1>
+  <div class="stackedit__html">
+<a class="installer-ad" href="https://github.com/TripingPC/k2vr-installer/releases/download/1.2/k2vr-installer-1.2.exe"></a>
+<h1 id="how-to-setup-k2vr-but-correctly">How to setup KinectToVR</h1>
 <p>This document aims to accompany Sharky’s original tutorial found at <a href="https://github.com/sharkyh20/KinectToVR">https://github.com/sharkyh20/KinectToVR</a> and to answer every possible question one might have.</p>
-<p>Join the <a href="https://discord.gg/Mu28W4N">Discord</a> if you have further questions.</p>
+<p>Join the <a style="background-color:#6a80ce" href="https://discord.gg/Mu28W4N">Discord</a> if you have further questions.</p>
 <h2 id="things-you-need-to-know">Things You Need To Know</h2>
 <p>▫ <strong>IGNORE THE TEMPTING GREEN DOWNLOAD BUTTON AND SCROLL DOWN THE PAGE AND READ THE WRITTEN INSTRUCTIONS</strong> (That’s the source code and you would have to compile it)</p>
+<p class="remark">Ignore this when using the installer</p>
 <p>▫ When positioning the Kinect sensor, <strong>you want it high up (above your head preferably) and pointing down.</strong> You need to know that proper skeleton tracking for Xbox 360 Kinect (V1) starts around 3-4 meters away from it, and 2-2.5 meters away for Xbox One Kinect (V2). With that in mind you want the Kinect as far away from you as possible, in the angle where you’re going to play.</p>
 <p>▫ The video tutorial is outdated, and should only be used as anecdotal reference as it uses an older version of the software and is missing some information present in the written instructions.</p>
 <p>▫ <strong>Do not forget to install the DLL fix for OpenVR-Input-Emulator listed in the install instructions.</strong> If after installing both OpenVR-Input-Emulator and replacing the DLL with the one compiled by Sharky, SteamVR boots into Safe Mode, click exit safe mode, let it restart and click it again. If this doesn’t work.</p>
+<p class="remark">Ignore this when using the installer!</p>
 <p>▫ As you’ll most likely be restarting SteamVR a few times while figuring things out. For your own sanity, go into the SteamVR settings, show advanced settings (bottom-left) and disable the SteamVR Home under General.</p>
-<p>▫ If using a Rift, Rift S or Oculus Quest with Oculus Link.  You may encounter a bug where one or both of your controllers’ input to SteamVR stops working (Can’t open the dashboard or click on it.) after initializing trackers.  If this happens, close out of KinectToVR, launch it again and initialize trackers again. The controllers will start working.</p>
+<p>▫ You may encounter a bug where <strong>one or both of your hands in VRChat is swapped with the trackers.</strong> and/or one or both of your controllers’ input to SteamVR stops working (Can’t open the dashboard or click on it.) after initializing trackers.  If this happens, close out of KinectToVR, launch it again and initialize trackers again. The controllers will start working.</p>
 <p>▫ The white arrow in SteamVR does not represent the Kinect in 3D space accurately and should be ignored.</p>
-<p>‎▫ Always remember to launch SteamVR, then KinectToVR, initialize trackers and then launch your game, in that order.  Or else things will crash.</p>
+<p>‎▫ Remember to launch SteamVR, then KinectToVR, initialize trackers and then launch your game, in that order.  Or else things will crash.</p>
 <p>▫ If your Kinect is turning on and off in a loop, make sure it’s microphone isn’t muted. Press Windows + R to open the Run dialog, and paste in <code>control mmsys.cpl,,1</code> to access recording devices and check on it. <strong>On Xbox 360 Kinect, the green LED flashing indicates normal operation.</strong></p>
 <p>▫ If KinectToVR says KINECT_NOT_GENUINE try unplugging and replugging in your Kinect.  Possibly in a port used by a different USB controller. Then click on “Reconnect Kinect”.</p>
 <h2 id="extra-stuff-you-should-probably-get">Extra Stuff You Should Probably Get</h2>
 <p>What people call “Playspace Mover” is actually Space Drag from <a href="https://github.com/OpenVR-Advanced-Settings/OpenVR-AdvancedSettings">OpenVR Advanced Settings</a>.<br>
-And addon for SteamVR (NOT VRCHAT) kinda like OpenVR-Input-Emulator, which contains incredibly useful stuff. Please refer people to this specific link when telling them about OVRAS.  The original one from Matzman666 is outdated and doesn’t work anymore.</p>
+An addon for SteamVR (NOT VRCHAT) kinda like OpenVR-Input-Emulator, which contains incredibly useful stuff.</p>
 <p>If you intend on playing VRChat with this, and you want to launch into FBT while in-game but are in an invite-only instance. You can use <a href="https://github.com/Yanorei32/VRChatRejoinTool">VRChat Rejoin Tool</a> to launch the game back into the last world you were in as if you launched it from the VRChat Web UI since launching K2VR will crash the game. <strong>This does not modify the client in any way and is perfectly within VRChat’s terms of service.</strong></p>
 <h2 id="random-questions">Random Questions</h2>
 <p><strong>What makes KinectToVR so much better than Driver4VR?</strong><br>
