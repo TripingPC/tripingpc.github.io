@@ -105,6 +105,11 @@ body{
   padding:0;
 }
 
+.stackedit__html img{
+  max-height: 400px;
+  
+}
+
 .stackedit__html .remark{
   margin-top:-24px;
   font-size: 18px;
@@ -184,35 +189,41 @@ body{
     <div class="hero-image"></div>
   </div>
   <div class="stackedit__html">
-<h1 id="main-header">How to set it all up</h1>
-<p>This website aims to accompany Sharky’s KinectToVR software found at <a href="https://github.com/sharkyh20/KinectToVR">https://github.com/sharkyh20/KinectToVR</a> and to answer every possible question one might have.</p>
+<h1 id="main-header">About KinectToVR</h1>
+<img src="https://raytracing-benchmarks.are-really.cool/12PukpK.png" alt="">
+<p>KinectToVR is a program created by sharkyh20 to use Kinect for full-body tracking in virtual reality, as in waist and feet tracking. It isn't a replacement for Driver4VR when it comes to color tracking, hand tracking, head tracking or adding virtual controllers.  It only does fullbody.</p>
+<p>Sharky’s KinectToVR original repo can be found at <a href="https://github.com/sharkyh20/KinectToVR">https://github.com/sharkyh20/KinectToVR</a></p>
 <p>Join the <a style="
   background-color:#6a80ce;
   text-decoration: none;
   padding:3px 4px;
   border-radius:3px;
   color: #fff;;
-  " href="https://discord.gg/Mu28W4N">Discord</a> if you have further questions.</p>
+  " href="https://discord.gg/Mu28W4N">Discord</a> if you have any questions.</p>
 <h2 id="calib-instructions">How to calibrate</h2>
-<p>Calibrating is mostly straight-forward. You just need to make sure <a href="#controller-bug">your controllers are working</a> and you should also <a href="#arrow">ignore the base statino</a>.</p>
+<p>Calibrating is mostly straight-forward. You just need to make sure <a href="#controller-bug">your controllers are working</a> and you should also <a href="#arrow">ignore the base station</a>.</p>
 <p>Imagine the Kinect is its own box in which you're tracked. And you're trying to line it up with the box of your VR headset.</p>
-<p>Click on initialize Trackers, then <strong>WAIT FOR 5 TO 10 SECONDS BEFORE PRESSING ANY BUTTONS</strong></p>
+<p>Click on initialize Trackers, then <strong>WAIT FOR 5 TO 10 SECONDS BEFORE PRESSING ANY BUTTONS</strong> or else input will be stolen away from your controllers.</p>
 <p>On the first tab of KinectToVR, after initializing trackers, 2 checkboxes will appear towards the bottom for rotation and position calibration, which let you move the trackers.</p>
 <p>Enable one checkbox at a time, and with the SteamVR dashboard closed, use the thumbsticks/trackpads on your VR controllers to line up the trackers to your body.</p>
+<p>Check <a href="#bindings">the SteamVR bindings</a> if the thumbsticks/touchpads don't do anything.</p>
 <p>Press any of the two triggers (analog buttons on the back of your controllers) to confirm each calibration step. and recheck any of the checkboxes for rotation or position if needed until they're roughly in the right spot.</p>
 <p>YOU'RE DONE!!  <del>>Do keep in mind <a href="#k2vr-restart">if your controllers weren't working</a> you will need to start and initialize K2VR twice when you want to play.</del></p>
-<h2 id="things-you-need-to-know">Things You Need To Know</h2>
+<h2 id="useful-info">Useful Info</h2>
 <p><strong>IGNORE THE TEMPTING GREEN DOWNLOAD BUTTON AND SCROLL DOWN THE PAGE AND READ THE WRITTEN INSTRUCTIONS</strong> (That’s the source code and you would have to compile it)</p>
 <p class="remark">Ignore this when using the installer</p>
 <p id="kinect-positioning">When positioning the Kinect sensor, <strong>you want it high up (above your head preferably) and pointing down.</strong> You need to know that proper skeleton tracking for Xbox 360 Kinect (V1) starts around 3-4 meters away from it, and 2-2.5 meters away for Xbox One Kinect (V2). With that in mind you want the Kinect as far away from you as possible, in the angle where you’re going to play.</p>
-<p id="controller-bug">You may encounter a bug where <strong>one or both of your hands in VRChat is swapped with the trackers.</strong> and/or one or both of your controllers’ input to SteamVR stops working (Can’t open the dashboard or click on it.) after initializing trackers.  If this happens, close out of KinectToVR, launch it again and initialize trackers again. The controllers will start working.<br>
+<p id="controller-bug">When spawning trackers, if you press any buttons on your VR controllers, you may encounter a bug where <strong>one or both of your hands in VRChat is swapped with the trackers.</strong> and/or one or both of your controllers’ input to SteamVR stops working (Can’t open the dashboard or click on it.) after initializing trackers.  If this happens, close out of KinectToVR, launch it again and initialize trackers again. The controllers will start working.<br>
 You may also need to restart K2VR if the trackers appear in the SteamVR status window, but don't show up in VR.
 <span id="k2vr-restart">If the above happens to you, it means you will need to launch K2VR and intialize trackers twice anytime you want to play.  Hope to have this fixed or find a workaround for it in the future.</span></p>
 <p id="bindings"><strong>If controller calibration still doesn't work:</strong><br>
-- Go to the Calibration tab of KinectToVR<br>
-Click "force K2VR to show in VR bindings menu"<br>
-- In SteamVR, go to Settings, click Show Advanced Settings in the corner, Controllers, Show Old Bindings UI<br>
-- Click "Show more applications", scroll down to kinectv1process.exe (or kinectv2process.exe if using xbone) then pick any of the community bindings and click "Activate".
+  <ul>
+    <li>Go to the Calibration tab of KinectToVR</li>
+    <li>Click "force K2VR to show in VR bindings menu"</li>
+    <li>In SteamVR, go to Settings, Controllers, Show Old Bindings UI</li>
+    <li>Click "Show more applications", scroll down to kinectv1process.exe (or kinectv2process.exe if using xbone)</li>
+    <li>Pick any of the community bindings and click "Activate".</li>
+  </ul>
 </p>
 <p id="arrow"><strong>Since April 19th 2020, the arrow is no longer with us, Rest in peace arrow 2018-2020, But do ignore the kinect device's position when lining up the trackers.</strong> The white arrow in SteamVR does not represent the Kinect in 3D space accurately and should be ignored in favor of aligning the trackers with your body.</p>
 <p id="old-video">The video tutorial is old, and should only be used as anecdotal reference as it uses an older version of the software and is missing some information present in the written instructions.</p>
