@@ -177,7 +177,8 @@ body{
     <div class="hero-content">
       <h1>Introducing K2VR Installer</h1>
       <p>Install KinectToVR and its dependencies in only a few clicks! (Provided it works.)</p>
-      <a class="download-button" href="https://github.com/TripingPC/k2vr-installer/releases/download/1.3.1/k2vr-installer-1.3.1.exe">Download</a>
+      <p style="font-size: smaller;">You should get this release even if you already installed K2VR. <br>It installs a <a style="color:#3BC52F" href="https://github.com/TripingPC/KinectToVR/releases/tag/a0.6.1">new version of KinectToVR</a> (a0.6.1)</p>
+      <a class="download-button" href="https://github.com/TripingPC/k2vr-installer/releases/download/1.4/k2vr-installer-1.4.exe">Download</a>
       <a class="github-link" href="https://github.com/TripingPC/k2vr-installer">See on Github</a>
     </div>
     <div class="hero-image"></div>
@@ -193,12 +194,13 @@ body{
   color: #fff;;
   " href="https://discord.gg/Mu28W4N">Discord</a> if you have further questions.</p>
 <h2 id="calib-instructions">How to calibrate</h2>
-<p>Calibrating is mostly straight-forward. You just need to make sure <a href="#controller-bug">your controllers are working</a> and you should also <a href="#arrow">ignore the arrow</a>.</p>
+<p>Calibrating is mostly straight-forward. You just need to make sure <a href="#controller-bug">your controllers are working</a> and you should also <a href="#arrow">ignore the base statino</a>.</p>
 <p>Imagine the Kinect is its own box in which you're tracked. And you're trying to line it up with the box of your VR headset.</p>
-<p>On the first tab of KinectToVR, after initializing trackers, 2 checkboxes will appear towards the bottom for "Enable Kinect Rotation Calibration" and "Enable Kinect Position Calibration", which let you rotate and move the trackers respectively.</p>
+<p>Click on initialize Trackers, then <strong>WAIT FOR 5 TO 10 SECONDS BEFORE PRESSING ANY BUTTONS</strong></p>
+<p>On the first tab of KinectToVR, after initializing trackers, 2 checkboxes will appear towards the bottom for rotation and position calibration, which let you move the trackers.</p>
 <p>Enable one checkbox at a time, and with the SteamVR dashboard closed, use the thumbsticks/trackpads on your VR controllers to line up the trackers to your body.</p>
 <p>Press any of the two triggers (analog buttons on the back of your controllers) to confirm each calibration step. and recheck any of the checkboxes for rotation or position if needed until they're roughly in the right spot.</p>
-<p>YOU'RE DONE!!  Do keep in mind <a href="#k2vr-restart">if your controllers weren't working</a> you will need to start and initialize K2VR twice when you want to play.</p>
+<p>YOU'RE DONE!!  <del>>Do keep in mind <a href="#k2vr-restart">if your controllers weren't working</a> you will need to start and initialize K2VR twice when you want to play.</del></p>
 <h2 id="things-you-need-to-know">Things You Need To Know</h2>
 <p><strong>IGNORE THE TEMPTING GREEN DOWNLOAD BUTTON AND SCROLL DOWN THE PAGE AND READ THE WRITTEN INSTRUCTIONS</strong> (That’s the source code and you would have to compile it)</p>
 <p class="remark">Ignore this when using the installer</p>
@@ -206,19 +208,27 @@ body{
 <p id="controller-bug">You may encounter a bug where <strong>one or both of your hands in VRChat is swapped with the trackers.</strong> and/or one or both of your controllers’ input to SteamVR stops working (Can’t open the dashboard or click on it.) after initializing trackers.  If this happens, close out of KinectToVR, launch it again and initialize trackers again. The controllers will start working.<br>
 You may also need to restart K2VR if the trackers appear in the SteamVR status window, but don't show up in VR.
 <span id="k2vr-restart">If the above happens to you, it means you will need to launch K2VR and intialize trackers twice anytime you want to play.  Hope to have this fixed or find a workaround for it in the future.</span></p>
-<p id="bindings"><strong>>If controller calibration still doesn't work:</strong><br>
+<p id="bindings"><strong>If controller calibration still doesn't work:</strong><br>
 - Go to the Calibration tab of KinectToVR<br>
 Click "force K2VR to show in VR bindings menu"<br>
 - In SteamVR, go to Settings, click Show Advanced Settings in the corner, Controllers, Show Old Bindings UI<br>
 - Click "Show more applications", scroll down to kinectv1process.exe (or kinectv2process.exe if using xbone) then pick any of the community bindings and click "Activate".
 </p>
-<p id="arrow">The white arrow in SteamVR does not represent the Kinect in 3D space accurately and should be ignored in favor of aligning the trackers with your body.</p>
+<p id="arrow"><strong>Since April 19th 2020, the arrow is no longer with us, Rest in peace arrow 2018-2020, But do ignore the kinect device's position when lining up the trackers.</strong> The white arrow in SteamVR does not represent the Kinect in 3D space accurately and should be ignored in favor of aligning the trackers with your body.</p>
 <p id="old-video">The video tutorial is old, and should only be used as anecdotal reference as it uses an older version of the software and is missing some information present in the written instructions.</p>
 <p id="dll-fix"><strong>Do not forget to install the DLL fix for OpenVR-Input-Emulator listed in the install instructions.</strong> If after installing both OpenVR-Input-Emulator and replacing the DLL with the one compiled by Sharky, SteamVR boots into Safe Mode, click exit safe mode, let it restart and click it again. If this doesn’t work.</p>
 <p class="remark">Ignore this when using the installer!</p>
 <p id="steamvr-home">As you’ll most likely be restarting SteamVR a few times while figuring things out. For your own sanity, go into the SteamVR settings, show advanced settings (bottom-left) and disable the SteamVR Home under General.</p>
-<p id="beat-saber"><strong>If you're planning to use this for Beat Saber,</strong> I recommend you use VirtualMotionCapture with the SteamVR camera config file and optionally LIV if you want correct depth mapping with your avatar.  The CustomAvatar mod requires manual configuration of each tracker onto the model in Unity, and KinectToVR spawns the trackers in a different orientation than you would put on actual Vive trackers.</p>
-<p id="launch-order">Remember to launch SteamVR, then KinectToVR, initialize trackers and then launch your game, in that order.  Or else things will crash.</p>
+<p class="remark">Ignore this when using the installer!</p>
+<p id="beat-saber"><strong>If you're planning to use this for Beat Saber,</strong> I recommend you use VirtualMotionCapture with the SteamVR camera config file and optionally LIV if you want correct depth mapping with your avatar.  The CustomAvatar mod requires manual configuration of each tracker onto the model in Unity, and KinectToVR spawns the trackers in a different orientation than you would put on actual Vive trackers. <br>
+Alternatively you can go to the second tab of KinectToVR and enable HMD orientation for trackers which kinda works for the Beat Saber CustomAvatar mod.</p>
+<p id="steamvr-camera"><strong>If your Vive or Index camera isn't working</strong> that's perfectly normal, the installer disables it, because of a bug in OpenVR-InputEmulator which causes SteamVR to crash if the camera gets used in the dashboard or the chaperone.  You can re-enable it if you're not using KinectToVR
+<ul>
+  <li>Open SteamVR's settings from the desktop (click on the SteamVR label in the status window.)</li>
+  <li>Click on Settings, in the window that pops up, go to Startup/Shutdown.</li>
+  <li>Click on "Choose startup overlay apps" turn off VR Input Emulator and close the list.</li>
+  <li>Go to "Camera" and re-enable the camera. then click on "Restart SteamVR" at the top.</li>
+</ul>Do the same thing in reverse to use KinectToVR again.</p>
 <p id="bootloop">If your Kinect is turning on and off in a loop, make sure its microphone isn’t muted. Press Windows + R to open the Run dialog, and paste in <code>control mmsys.cpl,,1</code> to access recording devices and check on it. <strong>On Xbox 360 Kinect, the green LED flashing indicates normal operation.</strong></p>
 <p id="not-genuine">If KinectToVR says KINECT_NOT_GENUINE try unplugging and replugging in your Kinect.  Possibly in a port used by a different USB controller. Then click on “Reconnect Kinect”.</p>
 <h2 id="extras">Extra Stuff You Should Probably Get</h2>
